@@ -1,4 +1,7 @@
+
 body {
+  background: url('https://gallery.yopriceville.com/var/albums/Backgrounds/Dog_Background.jpg?m=1439512423') no-repeat center center fixed;
+  background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
