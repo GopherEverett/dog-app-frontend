@@ -26,7 +26,7 @@ function App(props) {
   const logOutUser = async (e) => {
     e.preventDefault()
     try {
-      await Axios.get('http://localhost:8000/user/logout', { withCredentials: true })
+      await Axios.get('https://dogapp-backend.herokuapp.com/user/logout', { withCredentials: true })
       removeCookie('username', { path: '/' })
       removeCookie('userid', { path: '/' })
       auth.logout(() => {
@@ -43,11 +43,12 @@ function App(props) {
     e.preventDefault()
     setIsLoading(true)
     try {
-      const res = await Axios.post(`http://localhost:8000/user/login`, {
+      const res = await Axios.post(`https://dogapp-backend.herokuapp.com/user/login`, {
         username: username,
         email: email,
         password: password
       }, { withCredentials: true })
+      console.log(res)
       setCookie('username', res.data.data.username, { path: '/' })
       setCookie('userid', res.data.data.id, { path: '/' })
       auth.login(() => {
@@ -65,7 +66,7 @@ function App(props) {
     e.preventDefault()
     setIsLoading(true)
     try {
-      const res = await Axios.post(`http://localhost:8000/user/register`, {
+      const res = await Axios.post(`https://dogapp-backend.herokuapp.com/user/register`, {
         username: username,
         email: email,
         password: password

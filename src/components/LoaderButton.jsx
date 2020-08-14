@@ -13,11 +13,9 @@ export default function LoaderButton({
             className={`LoaderButton ${className}`}
             disabled={disabled || isLoading}
             {...props}
-        >
-            {isLoading ?
+        >{isLoading ?
             <i className='fas fa-cog spinning' style={{'fontSize':'36px'}}></i> :
             "SUBMIT"
-            }
-        </Button>
+            }</Button>
     );
 }

@@ -9,7 +9,7 @@ export default function SingleDog(props) {
     const { id } = useParams()
     useEffect(() => {
         async function fetchData() {
-            const res = await Axios.get(`http://localhost:8000/api/v1/dogs/${id}`,
+            const res = await Axios.get(`https://dogapp-backend.herokuapp.com/api/v1/dogs/${id}`,
                 { withCredentials: true }
             )
             setDog(res.data.data)

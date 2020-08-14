@@ -11,7 +11,7 @@ export default function AddDogForm(props) {
     const createDog = async (e) => {
         e.preventDefault()
         try {
-            await Axios.post('http://localhost:8000/api/v1/dogs/', {
+            await Axios.post('https://dogapp-backend.herokuapp.com/api/v1/dogs/', {
                 name: name,
                 breed: breed
             }, { withCredentials: true })

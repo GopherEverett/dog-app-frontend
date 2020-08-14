@@ -7,7 +7,7 @@ export default function Dogs(props) {
     const [dogs, setDogs] = useState([])
     useEffect(() => {
         async function fetchData() {
-            const res = await Axios.get(`http://localhost:8000/api/v1/dogs/dogsbyowner/${props.cookies.cookies.userid}`,
+            const res = await Axios.get(`https://dogapp-backend.herokuapp.com/api/v1/dogs/dogsbyowner/${props.cookies.cookies.userid}`,
                 { withCredentials: true }
             )
             setDogs(res.data.data)

@@ -16,6 +16,9 @@ label {
 
 .dogformcont {
   margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-group {
@@ -24,6 +27,13 @@ label {
 
 .form-control {
   width: 30% !important;
+}
+
+form {
+  width: 90%;
+  display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .form-group {
@@ -52,4 +62,8 @@ label {
 
 .dogTitle {
   margin-bottom: 7vh;
+}
+
+#formGroupName {
+  width: 90%;
 }
