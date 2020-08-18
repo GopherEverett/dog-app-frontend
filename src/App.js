@@ -71,7 +71,6 @@ function App(props) {
         email: email,
         password: password
       }, { withCredentials: true })
-      console.log(res)
       setCookie('userid', res.data.data.id, { path: '/' })
       setCookie('username', res.data.data.username, { path: '/' })
       auth.login(() => {
